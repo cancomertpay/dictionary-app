@@ -2,15 +2,15 @@
 
 import { useThemeContext } from "@/contexts/theme-context";
 
-import Image from "next/image";
-import moon_icon from "/public/images/icon-moon.svg";
 import MoonIcon from "../UI/icons/moon-icon";
+
+import { motion } from "framer-motion";
 
 function ThemeSwitcher() {
   const { isDarkMode, toggleTheme } = useThemeContext();
   return (
-    <p className="flex gap-2 items-center">
-      <label className="relative inline-block w-12 h-6 select-none">
+    <motion.p whileHover={{ scale: 1.1 }} className="flex gap-2 items-center ">
+      <label className="relative inline-block w-12 h-6 select-none cursor-pointer">
         <input
           type="checkbox"
           checked={isDarkMode}
@@ -21,7 +21,7 @@ function ThemeSwitcher() {
         <span className="bg-white block w-4 h-4 rounded-full absolute top-1 left-1 transition-all duration-200 peer-checked:left-7"></span>
       </label>
       <MoonIcon color={isDarkMode ? "#A445ED" : "#838383"} />
-    </p>
+    </motion.p>
   );
 }
 
