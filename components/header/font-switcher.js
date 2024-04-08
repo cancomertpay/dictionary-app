@@ -61,7 +61,7 @@ function FontSwitcher() {
       <div className="flex items-center justify-center gap-2 relative z-20">
         <motion.div
           whileHover={{ scale: 1.1 }}
-          animate={{ scale: isDropdownOpen ? 1.2 : 1 }}
+          animate={{ scale: isDropdownOpen ? 1.1 : 1 }}
           transition={{ duration: 0.3 }}
           className="flex items-center gap-5 cursor-pointer"
           onClick={toggleDropdown}
