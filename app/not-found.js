@@ -4,7 +4,7 @@ function NotFoundPage() {
       <span className="text-[70px] mb-[2%]">&#128565;</span>
       <p className="bold text-xl">No Definitions Found</p>
       <p className="text-neutral-grey">
-        Sorry pal, we couldn't find definitions for the word you were looking
+        Sorry pal, we couldn&apos;t find definitions for the word you were looking
         for. You can try the search again at later time or head to the web
         instead.
       </p>
