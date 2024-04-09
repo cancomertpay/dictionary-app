@@ -27,7 +27,7 @@ function Body({ children }) {
 
   return (
     <body
-      className={`bg-neutral-white dark:bg-neutral-black h-screen box-border text-neutral-black dark:text-neutral-white transition-all duration-200 ${fontFormat.className}`}
+      className={`bg-neutral-white dark:bg-neutral-black h-screen box-border text-neutral-thunder-black dark:text-neutral-white transition-colors duration-200 px-5 md:px-8 lg:px-[29%] ${fontFormat.className}`}
     >
       {children}
     </body>

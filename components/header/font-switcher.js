@@ -62,7 +62,6 @@ function FontSwitcher() {
         <motion.div
           whileHover={{ scale: 1.1 }}
           animate={{ scale: isDropdownOpen ? 1.1 : 1 }}
-          transition={{ duration: 0.3 }}
           className="flex items-center gap-5 cursor-pointer"
           onClick={toggleDropdown}
         >
@@ -91,7 +90,7 @@ function FontSwitcher() {
                ? "!text-primary-purple"
                : "text-neutral-thunder-black"
            } ${item.font}`}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05, type: "tween" }}
                 >
                   {item.name}
                 </motion.span>
