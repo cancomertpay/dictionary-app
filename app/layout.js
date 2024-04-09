@@ -3,11 +3,12 @@ import ThemeProvider from "@/contexts/theme-context";
 import FontProvider from "@/contexts/font-context";
 
 // custom components
-import MainHeader from "@/components/header/header";
 import Body from "@/components/root-layout/body";
 
 // global styles
 import "./globals.css";
+import Header from "@/components/header/header";
+import SearchField from "@/components/root-layout/search-field";
 
 export const metadata = {
   title: "Dictionary Web App",
@@ -20,11 +21,12 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
       <FontProvider>
         <html lang="en">
-          <Body className="bg-neutral-white dark:bg-neutral-black h-screen box-border text-neutral-thunder-black dark:text-neutral-white transition-all duration-200">
-            <div className="px-5 md:px-8 lg:px-[25%]">
-              <MainHeader />
+          <Body>
+            <Header />
+            <main>
+              <SearchField />
               {children}
-            </div>
+            </main>
           </Body>
         </html>
       </FontProvider>
