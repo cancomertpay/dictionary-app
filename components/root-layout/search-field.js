@@ -47,7 +47,7 @@ function SearchField() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSubmit(modifyTerm(terms));
+      handleSubmit();
     }
   };
 
