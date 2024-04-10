@@ -1,17 +1,17 @@
 "use client";
 import variants from "@/variants/variants";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-function Main({ children }) {
+function ContentContainer({ children }) {
   return (
-    <motion.main
+    <motion.div
       variants={variants.fadeIn("left", 0.2, 0.2)}
       initial="hidden"
       animate="visible"
     >
-      <AnimatePresence>{children}</AnimatePresence>
-    </motion.main>
+      {children}
+    </motion.div>
   );
 }
 
-export default Main;
+export default ContentContainer;

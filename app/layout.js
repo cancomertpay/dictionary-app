@@ -10,6 +10,7 @@ import Main from "@/components/main/main";
 
 // global styles
 import "./globals.css";
+import ContentContainer from "@/components/main/main";
 
 export const metadata = {
   title: "Dictionary Web App",
@@ -24,8 +25,10 @@ export default function RootLayout({ children }) {
         <html lang="en">
           <Body>
             <Header />
-            <SearchField />
-            <Main>{children}</Main>
+            <main>
+              <SearchField />
+              <ContentContainer>{children}</ContentContainer>
+            </main>
           </Body>
         </html>
       </FontProvider>
