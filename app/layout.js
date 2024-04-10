@@ -4,11 +4,12 @@ import FontProvider from "@/contexts/font-context";
 
 // custom components
 import Body from "@/components/root-layout/body";
+import Header from "@/components/header/header";
+import SearchField from "@/components/root-layout/search-field";
+import Main from "@/components/main/main";
 
 // global styles
 import "./globals.css";
-import Header from "@/components/header/header";
-import SearchField from "@/components/root-layout/search-field";
 
 export const metadata = {
   title: "Dictionary Web App",
@@ -23,10 +24,8 @@ export default function RootLayout({ children }) {
         <html lang="en">
           <Body>
             <Header />
-            <main>
-              <SearchField />
-              {children}
-            </main>
+            <SearchField />
+            <Main>{children}</Main>
           </Body>
         </html>
       </FontProvider>

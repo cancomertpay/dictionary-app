@@ -5,6 +5,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
+import variants from "@/variants/variants";
 
 function SearchField() {
   const router = useRouter();
@@ -47,7 +48,7 @@ function SearchField() {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      handleSubmit(modifyTerm(terms));
+      handleSubmit();
     }
   };
 
@@ -67,7 +68,12 @@ function SearchField() {
   }, [params.searchTerm]);
 
   return (
-    <div className="relative mt-2">
+    <motion.div
+      variants={variants.fadeIn("right", 0.2, 0.2)}
+      initial="hidden"
+      animate="visible"
+      className="relative mt-2"
+    >
       <input
         type="text"
         placeholder="Dictionary"
@@ -95,7 +101,7 @@ function SearchField() {
           priority
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
