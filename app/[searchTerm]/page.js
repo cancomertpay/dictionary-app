@@ -2,8 +2,6 @@ import Dictionary from "@/components/main/dictionary/dictionary";
 import { fetchWord } from "@/lib/dictionary";
 
 async function SearchResult({ params }) {
-  if (!params.searchTerm) return null;
-
   const reverseModifyTerm = (text) => {
     return text?.replace(/-/g, " ");
   };
