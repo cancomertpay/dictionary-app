@@ -11,7 +11,7 @@ function SearchField() {
   const router = useRouter();
   const params = useParams();
 
-  const [terms, setTerms] = useState(params.searchTerm);
+  const [terms, setTerms] = useState("");
   const [inputError, setInputError] = useState(false);
   const bounce = useRef();
 
@@ -64,6 +64,7 @@ function SearchField() {
   }, [terms]);
 
   useEffect(() => {
+    if (!params.searchTerm) return;
     setTerms(reverseModifyTerm(params.searchTerm));
   }, [params.searchTerm]);
 
@@ -74,7 +75,9 @@ function SearchField() {
       animate="visible"
       className="relative mt-2"
     >
-      <label htmlFor="search-input" className="hidden">Search</label>
+      <label htmlFor="search-input" className="hidden">
+        Search
+      </label>
       <input
         id="search-input"
         type="text"
