@@ -74,7 +74,9 @@ function SearchField() {
       animate="visible"
       className="relative mt-2"
     >
+      <label htmlFor="search-input" className="hidden">Search</label>
       <input
+        id="search-input"
         type="text"
         placeholder="Dictionary"
         className={`w-full font-bold border border-transparent focus:border-primary-purple bg-neutral-white-smoke dark:bg-neutral-jungle-black outline-none transition-all duration-200 rounded-2xl py-3 px-5 ${
