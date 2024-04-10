@@ -5,10 +5,10 @@ async function SearchResult({ params }) {
   const reverseModifyTerm = (text) => {
     return text?.replace(/-/g, " ");
   };
-  const data = await fetchWord(reverseModifyTerm(params.searchTerm));
+  const data = await fetchWord(reverseModifyTerm(params?.searchTerm));
   return (
     <div className="pb-14 overflow-hidden">
-      {data.map(
+      {data?.map(
         (word, index) =>
           index === 0 && (
             <Dictionary
