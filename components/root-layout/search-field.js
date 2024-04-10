@@ -11,7 +11,7 @@ function SearchField() {
   const router = useRouter();
   const params = useParams();
 
-  const [terms, setTerms] = useState("");
+  const [terms, setTerms] = useState("dictionary");
   const [inputError, setInputError] = useState(false);
   const bounce = useRef();
 
