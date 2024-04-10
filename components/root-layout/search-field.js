@@ -78,7 +78,7 @@ function SearchField() {
         type="text"
         placeholder="Dictionary"
         className={`w-full font-bold border border-transparent focus:border-primary-purple bg-neutral-white-smoke dark:bg-neutral-jungle-black outline-none transition-all duration-200 rounded-2xl py-3 px-5 ${
-          inputError && "border-primary-red"
+          inputError && "!border-primary-red"
         }`}
         value={terms}
         onChange={handleChange}
