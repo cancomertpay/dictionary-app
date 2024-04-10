@@ -3,7 +3,7 @@ import { fetchWord } from "@/lib/dictionary";
 
 async function SearchResult({ params }) {
   const reverseModifyTerm = (text) => {
-    return text.replace(/-/g, " ");
+    return text?.replace(/-/g, " ");
   };
   const data = await fetchWord(reverseModifyTerm(params.searchTerm));
   return (

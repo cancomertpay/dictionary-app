@@ -16,12 +16,12 @@ function SearchField() {
   const bounce = useRef();
 
   const modifyTerm = (text) => {
-    const modifiedText = text.replace(/\s+/g, "-");
+    const modifiedText = text?.replace(/\s+/g, "-");
     return modifiedText;
   };
 
   const reverseModifyTerm = (text) => {
-    return text.replace(/-/g, " ");
+    return text?.replace(/-/g, " ");
   };
 
   const isLocalString = (text) => {
@@ -39,11 +39,11 @@ function SearchField() {
   };
 
   const handleSubmit = () => {
-    if (terms.trim() === "") {
+    if (terms?.trim() === "") {
       setInputError(true);
       return;
     }
-    router.push("/" + modifyTerm(terms.trim()));
+    router.push("/" + modifyTerm(terms?.trim()));
   };
 
   const handleKeyDown = (e) => {
@@ -60,7 +60,7 @@ function SearchField() {
     bounce.current = setTimeout(() => {
       bounce.current = null;
       handleSubmit();
-    }, 500);
+    }, 800);
   }, [terms]);
 
   useEffect(() => {
