@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function DictionaryMeaningLayout({ meaning, definitions, synonyms }) {
   const modifyTerm = (text) => {
-    const modifiedText = text.replace(/\s+/g, "-");
+    const modifiedText = text?.replace(/\s+/g, "-");
     return modifiedText;
   };
   return (
